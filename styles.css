@@ -1,0 +1,179 @@
+*{
+    margin : 0; 
+    padding :0;
+    box-sizing: border-box;
+}
+
+html , body {
+   height : 100vh;
+   width : 100vw;
+}
+
+
+.page1{
+   font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(212, 212, 215);
+}
+
+.page1 header {
+    height : 40vh;
+    width : 100vw;
+    background-image: linear-gradient(blue,rgb(8, 8, 99), black);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+    padding : 2vw;
+    color : white;
+}
+
+.page1 header .img-box{
+    height : 15vh;
+    width : 15vh;
+    border-radius: 50%;
+    overflow: hidden;
+    border : 4px solid white;
+}
+.page1 header .img-box img{
+    height : 100%;
+    width : 100%;
+    object-fit: cover;
+    object-position: center;
+    transition : 0.25s linear
+}
+.page1 header .img-box img:hover{
+    scale: 1.2;
+}
+.page1 header h1{
+    font-size: 2.5vw;
+    line-height: 4vw;
+}
+.page1 header p{
+    font-size: 1.2vw;
+    font-weight: 500;
+}
+
+.page1  .scroller{
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    height : 55vh;
+    width : 100vw;
+    
+}
+
+/************about******/
+.page1  .scroller .about {
+    white-space: wrap;
+    display: inline-block;
+     height : 50vh;
+     width : 60vh;
+     padding : 2vw;
+     background-color: rgb(30, 144, 79);
+     margin: auto 2vh;
+     border-radius: 25px;
+     color: white;
+     line-height: none;
+}
+.page1  .scroller .about:hover{
+    box-shadow: 4px 4px 6px rgb(41, 41, 41);
+}
+.page1 .scroller .about h1 {
+    font-size: 4vh;
+    line-height: 6vh;
+}
+.page1 .scroller .about p{
+    font-size: 2vh;
+    padding : 2vh 0;
+    line-height: 3vh;
+}
+
+.page1  .scroller .about button{
+    padding : 1vh 3vh;
+    border-radius: 25px;
+    border : none;
+    font-weight: 600;
+}
+/*****************skills*************/
+
+.page1 .scroller .skills ul {
+    padding : 2vh 0;
+}
+.page1 .scroller .skills ul li{
+    font-size: 2vh;
+    padding : 1vh 0;
+}
+
+/*******************report*************/
+.page1 .scroller .reports {
+    margin-top: 2vh;
+}
+
+/***************campaigns**********/
+.page1 .campaigns{
+    /* display: inline-block; */
+    /* height : 0vh; */
+    width : 95vw;
+    padding : 2vw;
+    background-color: rgb(226, 18, 241);
+    margin: 2vw auto;
+    border-left : 7px solid green;
+    border-radius: 25px;
+    /* color : white; */
+}
+
+.page1 .campaigns h1{
+    font-size: 2vw;
+    line-height: 3vw;
+}
+.page1 .campaigns hr{
+    margin : 1vw 0;
+}
+.page1 .campaigns p{
+    font-size: 1vw;
+    line-height: 1.5vw;
+}
+
+@media(max-width : 600px){
+
+    .page1 header{
+        justify-content: center;
+    }
+    .page1 header h1{
+      font-size: 6vw;
+      line-height: 10vw;
+    }
+    .page1 header p{
+      font-size: 3.2vw;
+      line-height: 10vw;
+    }
+    .page1 .scroller{
+        display: inherit;
+        overflow-x :scroll;
+        white-space: nowrap;
+        overflow-y: hidden;
+    }
+    .page1 .scroller .about{
+        display: inline-block;
+        width : 45vh;
+    }
+    .page1 .scroller .about:nth-child(1){
+       transform: translateY(3%);
+    }
+    .page1 .scroller .about:nth-child(2){
+       transform: translateY(-6%);
+    }
+    .page1 .scroller .about:nth-child(3){
+       padding : 6vw;
+       transform: translateY(2%);
+    }
+
+    .page1 .campaigns h1{
+        font-size: 6vw;
+        line-height: 10vw;
+    }
+    .page1 .campaigns p{
+        font-size: 4vw;
+        line-height: 6vw;
+    }
+}
